@@ -1,1 +1,82 @@
-{"nbformat":4,"nbformat_minor":0,"metadata":{"colab":{"provenance":[],"authorship_tag":"ABX9TyNU0Dkx8Uy8yIZR1SuslkgV"},"kernelspec":{"name":"python3","display_name":"Python 3"},"language_info":{"name":"python"}},"cells":[{"cell_type":"code","source":["# Office Automation Scripts\n","\n","\n","A collection of Python GUI tools for news monitoring using the Naver API and extracting text from card news images (OCR).\n","\n","\n","---\n","\n","\n","## 📁 Included Files\n","\n","\n","- `monitoring_5_github.py`: News monitoring/search tool using Naver News API (with GUI)\n","\n","\n","- `texter_github.py`: Card news image OCR text extractor and saver (with GUI)\n","\n","\n","---\n","\n","\n","## 1️⃣ monitoring_5_github.py (Naver News Monitoring Tool)\n","\n","\n","### Features\n","\n","\n","- Search and filter news articles using the Naver News API\n","\n","\n","- Support for multiple keywords search at once\n","\n","\n","- Date/time range filtering (to the minute)\n","\n","\n","- Preview news items in-app, open article links in browser\n","\n","\n","- Save search results as HTML or TXT files\n","\n","\n","- Auto-display media sources for major Korean press\n","\n","\n","### How to Run\n","\n","\n","1. Requires Python 3.x\n","\n","\n","2. Install required packages:\n","\n","\n","    ```\n","\n","\n","    pip install requests tkcalendar pytz\n","\n","\n","    ```\n","\n","\n","    *(tkinter is usually included with standard Python installations)*\n","\n","\n","3. Set up your Naver API credentials:\n","\n","\n","    Replace `MY_NAVER_CLIENT_ID` and `MY_NAVER_CLIENT_SECRET` in the code with the values from your [Naver Developers](https://developers.naver.com/main/) account.\n","\n","\n","4. Run the program:\n","\n","\n","    ```\n","\n","\n","    python monitoring_5_github.py\n","\n","\n","    ```\n","\n","\n","\n","---\n","\n","\n","## 2️⃣ texter_github.py (Card News Image OCR Extractor)\n","\n","\n","### Features\n","\n","\n","- Extract text from images (supports Korean & English, via Tesseract OCR)\n","\n","\n","- Process multiple images at once; save as individual .txt files or merge into one file\n","\n","\n","- Reorder and delete images within the list UI\n","\n","\n","- Automatic preprocessing (binarization, denoising) for better OCR\n","\n","\n","- Supports various image formats (.jpg, .png, etc.)\n","\n","\n","### How to Run\n","\n","\n","1. Requires Python 3.x\n","\n","\n","2. Install required packages:\n","\n","\n","    ```\n","\n","\n","    pip install pillow pytesseract opencv-python numpy\n","\n","\n","    ```\n","\n","\n","3. Install [Tesseract OCR](https://github.com/tesseract-ocr/tesseract)\n","\n","\n","   (On Windows, the default path is usually: `C:\\Program Files\\Tesseract-OCR\\tesseract.exe`)\n","\n","\n","4. Make sure `pytesseract.pytesseract.tesseract_cmd` in the code matches your Tesseract installation path.\n","\n","\n","5. Run the program:\n","\n","\n","    ```\n","\n","\n","    python texter_github.py\n","\n","\n","    ```\n","\n","\n","---\n","\n","\n","## Notes\n","\n","\n","- Both programs use a graphical user interface (GUI). When you run the scripts, a window should open.\n","\n","\n","- **For Naver News Monitoring**, your own Naver API credentials are required.\n","\n","\n","- **For OCR extraction**, make sure Tesseract is installed and the Korean language pack (`kor.traineddata`) is present for accurate Hangul recognition.\n","\n","\n","- If sharing the project publicly, **do not upload your personal API keys or secrets to GitHub!**\n","\n","\n","---\n","\n","\n","## License\n","\n","\n","MIT License\n","\n","\n","Copyright (c) famfam123-jw.github\n","\n","\n","---\n","\n","\n","## Contact / Contributing\n","\n","\n","Pull requests and issues are welcome!\n","\n","\n"],"metadata":{"id":"1TntOFOmIZal"},"execution_count":null,"outputs":[]},{"cell_type":"markdown","source":["\n","# Office Automation Scripts\n","\n","\n","네이버 뉴스 자동 모니터링 및 카드뉴스 이미지에서 텍스트 추출을 지원하는 오피스 자동화 Python GUI 도구 모음입니다.\n","\n","\n","---\n","\n","\n","## 📁 구성 파일\n","\n","\n","- `monitoring_5_github.py` : 네이버 뉴스 검색 및 필터링, 결과 저장 (GUI 환경)\n","\n","\n","- `texter_github.py` : 이미지(OCR)로부터 텍스트 추출 및 파일 저장 (GUI 환경)\n","\n","\n","---\n","\n","\n","## 1️⃣ monitoring_5_github.py (네이버 뉴스 자동 모니터링 도구)\n","\n","\n","### 기능\n","\n","\n","- 네이버 뉴스 API를 이용한 뉴스 검색\n","\n","\n","- 여러 키워드 동시 검색 지원\n","\n","\n","- 검색기간(시작일/종료일, 시/분 단위) 필터 기능\n","\n","\n","- 기사 미리보기 및 기사 링크 직접 열기\n","\n","\n","- 검색 결과를 HTML/TXT 파일로 저장\n","\n","\n","- 다양한 주요 언론사 출처 자동 표시\n","\n","\n","### 실행 방법\n","\n","\n","1. Python 3.x 설치 필요\n","\n","\n","2. 주요 패키지 설치\n","\n","\n","pip install requests tkcalendar pytz\n","\n","\n","(tkinter는 Python 기본 내장, 추가로 필요한 외부 모듈이 있을 경우 README에\n","추가로 명시)\n","\n","\n","3. 프로그램 실행\n","\n","\n","python monitoring_5_github.py\n","\n","\n","4. 네이버 API 키 필요  \n","\n","\n","- `MY_NAVER_CLIENT_ID`, `MY_NAVER_CLIENT_SECRET` 위치에 [네이버 개발자센터](https://developers.naver.com/main/)에서 발급받은 값을 입력해야 정상 작동\n","\n","\n","\n","---\n","\n","\n","## 2️⃣ texter_github.py (카드뉴스 이미지 OCR 텍스트 추출기)\n","\n","\n","### 기능\n","\n","\n","- 이미지 내 텍스트 추출 (한국어+영어 모두 지원)\n","\n","\n","- 여러 이미지를 한 번에 개별 저장 or 병합하여 한 파일로 저장 가능\n","\n","\n","- drag & drop, 목록 순서 조절, 삭제 등 이용 편의성 강화\n","\n","\n","- OCR 전처리 자동 적용 (OpenCV, Pillow 등)\n","\n","\n","- .jpg, .png 등 다양한 이미지 파일 지원\n","\n","\n","### 실행 방법\n","\n","\n","1. Python 3.x 설치 필요\n","\n","\n","2. 주요 패키지 설치\n","\n","\n","pip install pillow pytesseract opencv-python numpy\n","\n","\n","3. [Tesseract OCR 엔진 설치](https://github.com/tesseract-ocr/tesseract)\n","(Windows라면 기본 경로: `C:\\Program Files\\Tesseract-OCR\\tesseract.exe`)\n","\n","\n","4. 아래 경로(`pytesseract.pytesseract.tesseract_cmd`)가 본인 PC 설치 위치와 맞는지 확인 및 수정\n","\n","\n","5. 프로그램 실행\n","\n","\n","python texter_github.py\n","\n","\n","\n","---\n","\n","\n","## 참고/유의사항\n","\n","\n","- 두 프로그램 모두 GUI(그래픽 인터페이스 기반)로, 실행하면 프로그램 창이 열립니다.\n","\n","\n","- 네이버 뉴스 모니터링 프로그램 사용 시, 네이버 개발자센터의 API 키가 꼭 필요합니다.\n","\n","\n","- 카드뉴스 OCR 추출기는 Tesseract 설치와 한글 언어팩(`kor`)이 추가 설치되어 있어야 한글 인식률이 높아집니다.\n","\n","\n","- (필요 시) 본인이 사용한 예시 스크린샷, 결과물, .gif 등 첨부 가능\n","\n","\n","---\n","\n","\n","## 라이선스\n","\n","\n","## License\n","\n","\n","MIT License\n","\n","\n","Copyright (c) famfam123-jw.github\n","\n","\n","---\n","\n","\n","## 문의/기여\n","\n","\n","- Pull Request나 Issue 등록 환영!\n","\n","\n"],"metadata":{"id":"zMJNymMII9iK"}},{"cell_type":"markdown","source":[],"metadata":{"id":"_XWqh_GZI0dq"}}]}
+# Office Automation Scripts
+
+A collection of Python GUI tools for news monitoring using the Naver API and extracting text from card news images (OCR).
+
+## 📁 Included Files
+
+- `monitoring_5_github.py`: News monitoring/search tool using Naver News API (with GUI)
+- `texter_github.py`: Card news image OCR text extractor and saver (with GUI)
+
+---
+
+## 1️⃣ monitoring_5_github.py (Naver News Monitoring Tool)
+
+### Features
+- Search and filter news articles using the Naver News API
+- Support for multiple keywords search at once
+- Date/time range filtering (to the minute)
+- Preview news items in-app, open article links in browser
+- Save search results as HTML or TXT files
+- Auto-display media sources for major Korean press
+
+### How to Run
+1. Requires Python 3.x
+2. Install required packages:
+    ```
+    pip install requests tkcalendar pytz
+    ```
+    *(tkinter is usually included with standard Python installations)*
+3. Set up your Naver API credentials in the code
+4. Run the program:
+    ```
+    python monitoring_5_github.py
+    ```
+
+---
+
+## 2️⃣ texter_github.py (Card News Image OCR Extractor)
+
+### Features
+- Extract text from images (supports Korean & English, via Tesseract OCR)
+- Process multiple images at once; save as individual .txt files or merge into one file
+- Reorder and delete images within the list UI
+- Automatic preprocessing (binarization, denoising) for better OCR
+- Supports various image formats (.jpg, .png, etc.)
+
+### How to Run
+1. Requires Python 3.x
+2. Install required packages:
+    ```
+    pip install pillow pytesseract opencv-python numpy
+    ```
+3. Install [Tesseract OCR](https://github.com/tesseract-ocr/tesseract)
+   (On Windows, the default path is usually: `C:\Program Files\Tesseract-OCR\tesseract.exe`)
+4. Make sure `pytesseract.pytesseract.tesseract_cmd` in the code matches your Tesseract installation path.
+5. Run the program:
+    ```
+    python texter_github.py
+    ```
+
+---
+
+## Notes
+
+- Both programs use a graphical user interface (GUI). When you run the scripts, a window should open.
+- **For Naver News Monitoring**, your own Naver API credentials are required.
+- **For OCR extraction**, make sure Tesseract is installed and the Korean language pack (`kor.traineddata`) is present for accurate Hangul recognition.
+- If sharing the project publicly, **do not upload your personal API keys or secrets to GitHub!**
+
+---
+
+## License
+
+MIT License
+
+Copyright (c) famfam123-jw.github
+
+---
+
+## Contact / Contributing
+
+Pull requests and issues are welcome!
+
